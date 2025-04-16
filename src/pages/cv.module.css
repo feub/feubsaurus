@@ -1,0 +1,40 @@
+.cvContainer {
+  display: grid;
+  grid-template-columns: [first] 320px auto;
+  grid-template-rows: auto;
+  column-gap: 1.2em;
+  margin: 1.2em;
+  color: #f5efe7;
+}
+
+.roundedBox {
+  background-color: #272e35;
+  border-radius: 0.7em;
+  padding: 1em;
+  margin-bottom: 1.2em;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.profile h2 {
+  margin-bottom: 0;
+}
+
+.profile p {
+  font-size: 0.8em;
+  margin-bottom: 0;
+}
+
+.intro {
+}

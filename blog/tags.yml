@@ -1,0 +1,34 @@
+docker:
+  label: Docker
+  permalink: /docker
+  description: Docker tag description
+
+wordpress:
+  label: Wordpress
+  permalink: /wordpress
+  description: Wordpress tag description
+
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+  description: Docusaurus tag description
+
+redis:
+  label: Redis
+  permalink: /redis
+  description: Redis tag description
+
+fedora:
+  label: Fedora
+  permalink: /fedora
+  description: Fedora tag description
+
+linux:
+  label: Linux
+  permalink: /linux
+  description: Linux tag description
+
+ide:
+  label: IDE
+  permalink: /ide
+  description: IDE tag description

@@ -1,0 +1,68 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 1em;
+  margin-top: 0.75em;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #d8c4b6;
+  margin-top: 0.2em;
+}
+
+.type {
+  color: "#D8C4B6";
+}
+
+.label {
+  border-radius: 0.5em;
+  background-color: #3e5879;
+  padding: 0.2em 0.6em;
+  margin: 0 0.4em 0.4em 0;
+  display: inline-block;
+  font-size: 0.7em;
+}
+
+.languageBar {
+  width: 100%;
+  height: 10px;
+  background-color: #213555;
+  border-radius: 5px;
+  margin: 5px 0 15px 0;
+  overflow: hidden;
+}
+
+.languageFill {
+  height: 100%;
+  background-color: #3e5879;
+  border-radius: 5px;
+}
+
+.switcherContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.switcherButton {
+  padding: 8px 16px;
+  border: 1px solid #3e5879;
+  background-color: #3e5879;
+  color: #d8c4b6;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.switcherButton.active {
+  border: 1px solid #3e5879;
+  background-color: #213555;
+  color: #f5efe7;
+}
+
+.switcherButton:hover:not(.active) {
+  background-color: #d8c4b6;
+  color: #3e5879;
+}

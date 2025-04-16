@@ -26,8 +26,8 @@ export default function Languages(): ReactNode {
     <>
       <h3>Langues</h3>
       <div className="flex flex-col flex-wrap">
-        {langs.map((lang) => (
-          <>
+        {langs.map((lang, idx) => (
+          <div key={idx}>
             {lang.name}
             <div className={styles.languageBar}>
               <div
@@ -35,7 +35,7 @@ export default function Languages(): ReactNode {
                 style={{ width: lang.level }}
               ></div>
             </div>
-          </>
+          </div>
         ))}
       </div>
     </>

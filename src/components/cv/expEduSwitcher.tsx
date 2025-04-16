@@ -1,4 +1,5 @@
 import styles from "./styles.module.css";
+import { BriefcaseIcon, AcademicCapIcon } from "@heroicons/react/24/outline";
 
 type ExpEduSwitcherProps = {
   showExperience: boolean;
@@ -17,7 +18,10 @@ export default function ExpEduSwitcher({
         }`}
         onClick={() => onSwitch(true)}
       >
-        Expérience
+        <div>
+          <BriefcaseIcon className={styles.switcherIcon} />
+        </div>
+        <div>Expérience</div>
       </button>
       <button
         className={`${styles.switcherButton} ${
@@ -25,7 +29,8 @@ export default function ExpEduSwitcher({
         }`}
         onClick={() => onSwitch(false)}
       >
-        Education
+        <AcademicCapIcon className={styles.switcherIcon} />
+        <div>Education</div>
       </button>
     </div>
   );

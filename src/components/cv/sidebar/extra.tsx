@@ -22,8 +22,12 @@ export default function extra(): ReactNode {
     <>
       <h3>Extra-professionnel</h3>
       <div>
-        {skills.map((competence) => (
-          <span className={styles.label} style={{ whiteSpace: "nowrap" }}>
+        {skills.map((competence, idx) => (
+          <span
+            key={idx}
+            className={styles.label}
+            style={{ whiteSpace: "nowrap" }}
+          >
             {competence}
           </span>
         ))}

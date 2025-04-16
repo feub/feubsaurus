@@ -26,7 +26,7 @@ export default function Cv() {
         <div className="container">
           <div className={styles.cvContainer}>
             <div>
-              <div className={`${styles.profile} ${styles.roundedBox}`}>
+              <div className={`${styles.roundedBox}`}>
                 <Profile />
               </div>
 

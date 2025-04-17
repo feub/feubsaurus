@@ -6,7 +6,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Fabien Amann",
-  tagline: "Vive les montagnes vertes",
+  tagline:
+    "Le site de Fabien Amann, développeur web full stack - PHP, TypeScript, Symfony, React, etc",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -69,7 +70,7 @@ const config: Config = {
       title: "Fabien Amann",
       logo: {
         alt: "Fabien Amann",
-        src: "img/logo.svg",
+        src: "img/feubsaurus.png",
       },
       items: [
         // {

@@ -7,7 +7,6 @@ import styles from "./index.module.css";
 import Cv from "./cv";
 
 function HomepageHeader() {
-  // const { siteConfig } = useDocusaurusContext();
   return (
     <header
       className={clsx(
@@ -30,7 +29,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description={`Hello from ${siteConfig.tagline}`}
     >
       <HomepageHeader />
       <main>

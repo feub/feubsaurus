@@ -7,6 +7,16 @@
   color: #f5efe7;
 }
 
+/* Add responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .cvContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 1.2em;
+    margin: 0.8em;
+  }
+}
+
 .cvContainer p:last-child {
   margin-bottom: 0;
 }

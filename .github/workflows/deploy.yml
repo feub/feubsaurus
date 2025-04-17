@@ -27,7 +27,7 @@ jobs:
       - name: Deploy files to VPS
         uses: nogsantos/scp-deploy@master
         with:
-          src: ./public/*
+          src: ./build/*
           host: ${{ secrets.VPS_IP }}
           remote: ${{ secrets.VPS_DIR }}
           port: 22

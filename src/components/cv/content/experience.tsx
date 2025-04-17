@@ -14,7 +14,7 @@ type JobItem = {
 const jobs: JobItem[] = [
   {
     name: "IDHOUSSE (e-commerce)",
-    location: "France",
+    location: "Anould, France",
     desc: (
       <ul className={styles.jobItemDescList}>
         <li>Administration de 2 sites e-commerce Magento, puis Prestashop</li>
@@ -31,7 +31,7 @@ const jobs: JobItem[] = [
   },
   {
     name: "expat.com",
-    location: "Île Maurice",
+    location: "Port-Louis, Île Maurice",
     desc: (
       <ul className={styles.jobItemDescList}>
         <li>Conception et développement du module Événements</li>
@@ -44,7 +44,7 @@ const jobs: JobItem[] = [
   },
   {
     name: "Services on Demand",
-    location: "Italie",
+    location: "Rome, Italie",
     desc: (
       <ul className={styles.jobItemDescList}>
         <li>Développement PHP outils métier de la finance</li>
@@ -57,7 +57,7 @@ const jobs: JobItem[] = [
   },
   {
     name: "Ville de Remiremont",
-    location: "France",
+    location: "Remiremont, France",
     desc: (
       <ul className={styles.jobItemDescList}>
         <li>Création du premier site internet de la ville en 1999</li>
@@ -72,7 +72,7 @@ const jobs: JobItem[] = [
   },
   {
     name: "Service Militaire 10ème BCS",
-    location: "Djibouti",
+    location: "Djibouti City, Djibouti",
     desc: (
       <ul className={styles.jobItemDescList}>
         <li>

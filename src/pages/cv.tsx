@@ -7,6 +7,7 @@ import DownloadCv from "../components/cv/sidebar/downloadCv";
 import HardSkills from "../components/cv/sidebar/hardSkills";
 import Languages from "../components/cv/sidebar/languages";
 import Extra from "../components/cv/sidebar/extra";
+import Intro from "../components/cv/content/intro";
 import ExpEduSwitcher from "../components/cv/expEduSwitcher";
 import Education from "../components/cv/content/education";
 import Experience from "../components/cv/content/experience";
@@ -54,16 +55,7 @@ export default function Cv() {
 
             <main>
               <div className={`${styles.roundedBox}`}>
-                <p>
-                  Fort de plus de 25 ans d'expérience en tant que développeur
-                  web full stack (PHP), j'ai façonné des solutions digitales
-                  pour diverses industries en France comme à l'étranger.
-                </p>
-                <p>
-                  Mon récent titre de Concepteur Développeur d'Applications
-                  orienté Javascript/Typescript moderne me permet d'apporter une
-                  expertise renouvelée aux projets les plus innovants 🚀
-                </p>
+                <Intro />
               </div>
 
               <div className={styles.roundedBox}>

@@ -13,7 +13,7 @@ J'ai personnellement testé Cursor sur Fedora 41. L'installation reste simple, m
 
 ## Installer Cursor
 
-- Se rendre sur [cursor.com](cursor.com) et cliquer sur [Download for Linux](cursor.com). Il s'agit d'une application **.AppImage** qui est un format permettant de distribuer des applications sur Linux de manière universelle et portable.
+- Se rendre sur [cursor.com](https://cursor.com) et cliquer sur [Download for Linux](https://cursor.com). Il s'agit d'une application **.AppImage** qui est un format permettant de distribuer des applications sur Linux de manière universelle et portable.
 
 - Rendre le fichier exécutable, soit en faisant un clic-droit > permissions en mode GUI, ou avec un chmod en ligne de commande :
 

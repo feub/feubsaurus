@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
+import { useState } from "react";
 import styles from "./styles.module.css";
 import { CodeBracketSquareIcon } from "@heroicons/react/24/outline";
+import ImageModal from "./ImageModal";
 
 type ProjectItem = {
   name: string;
@@ -92,6 +94,18 @@ const projects_recent: ProjectItem[] = [
 ];
 
 function ProjectItem({ project }: { project: ProjectItem }) {
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [selectedImage, setSelectedImage] = useState<string>("");
+
+  const handleImageClick = (image: string) => {
+    setSelectedImage(require(`@site/static/img/${image}`).default);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <>
       <li className={styles.projectItemContainer}>
@@ -118,6 +132,7 @@ function ProjectItem({ project }: { project: ProjectItem }) {
                   src={require(`@site/static/img/${image}`).default}
                   alt={project.name}
                   className={styles.projectItemImage}
+                  onClick={() => handleImageClick(image)}
                 />
               ))
             ) : (
@@ -125,6 +140,10 @@ function ProjectItem({ project }: { project: ProjectItem }) {
                 src={require(`@site/static/img/${project.images}`).default}
                 alt={project.name}
                 className={styles.projectItemImage}
+                onClick={() =>
+                  typeof project.images === "string" &&
+                  handleImageClick(project.images)
+                }
               />
             )}
           </div>
@@ -140,6 +159,12 @@ function ProjectItem({ project }: { project: ProjectItem }) {
           </p>
         </div>
       </li>
+      <ImageModal
+        isOpen={modalOpen}
+        imageUrl={selectedImage}
+        alt={project.name}
+        onClose={closeModal}
+      />
     </>
   );
 }
@@ -151,7 +176,7 @@ export default function Projects(): ReactNode {
         <h2>Projets</h2>
         <ul role="list">
           {projects_recent.map((project, idx) => (
-            <ProjectItem project={project} />
+            <ProjectItem key={idx} project={project} />
           ))}
         </ul>
       </div>

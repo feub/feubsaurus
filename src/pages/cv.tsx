@@ -10,6 +10,7 @@ import Extra from "../components/cv/sidebar/extra";
 import ExpEduSwitcher from "../components/cv/expEduSwitcher";
 import Education from "../components/cv/content/education";
 import Experience from "../components/cv/content/experience";
+import Projects from "../components/cv/content/projects";
 
 export default function Cv() {
   const [showExperience, setShowExperience] = useState<boolean>(true);
@@ -81,6 +82,9 @@ export default function Cv() {
                   <Education />
                 </div>
               )}
+              <div className={styles.roundedBox}>
+                <Projects />
+              </div>
             </main>
           </div>
         </div>

@@ -1,0 +1,111 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.jobItemContainer,
+.eduItemContainer,
+.projectItemContainer {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #181e23;
+  padding: 0.8em 0;
+}
+
+.jobItemContainer:last-child,
+.eduItemContainer:last-child,
+.projectItemContainer:last-child {
+  border-bottom: none;
+}
+
+.jobImg,
+.eduImg,
+.projectLogo {
+  border-radius: 50%;
+  background-color: #d8c4b6;
+  width: 80px;
+  height: 80px;
+}
+
+.jobItemHeaderContainer {
+  width: 100%;
+}
+
+.jobItemHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jobItemHeader h4 {
+  margin: 0;
+}
+
+.jobItemHeaderRight {
+  text-align: right;
+}
+
+.jobItemHeaderLocation {
+  color: #d8c4b6;
+  font-size: smaller;
+}
+
+.jobItemPeriod {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5em;
+}
+
+.jobItemPeriodIcon,
+.projectLinkIcon {
+  width: 16px;
+  height: 16px;
+  color: #d8c4b6;
+}
+
+.jobItemDescList {
+  padding-left: 20px;
+  font-size: 0.9em;
+}
+
+.eduItemContainer {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #181e23;
+  padding: 0.8em 0;
+}
+
+.projectLinkContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3em;
+  margin-top: 0.5em;
+}
+
+.projectItemImagesContainer {
+  margin-top: 1em;
+}
+
+.projectItemImage {
+  border-radius: 0.5em;
+  background-color: #d8c4b6;
+  width: 200px;
+  height: 200px;
+  margin: 0 1em 1em 0;
+  object-fit: cover;
+}
+
+.projectLabel {
+  border-radius: 0.5em;
+  border: 1px solid #3e5879;
+  padding: 0.2em 0.6em;
+  margin: 0 0.4em 0.4em 0;
+  display: inline-block;
+  font-size: 0.7em;
+}

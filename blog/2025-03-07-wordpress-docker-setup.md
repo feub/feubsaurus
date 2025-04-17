@@ -1,11 +1,11 @@
 ---
-slug: wordpress-docker-setup
-title: Dockerizing Wordpress + Redis
+slug: wordpress-redis-docker-setup
+title: Setup Wordpress + Redis avec Docker
 authors: fabien
 tags: [docker, wordpress, redis, fedora, linux]
 ---
 
-This is my configuration for Wordpress development with Docker, using Redis as a bonus. I am a [Fedora Linux](https://fedoraproject.org) user, but this should be fine for any OS.
+Ceci est mon setup de développement Wordpress avec Docker, avec Redis en bonus. Je suis un utilisateur [Fedora Linux](https://fedoraproject.org), mais ça devrait fonctionner avec tout autre OS.
 
 <!-- truncate -->
 
@@ -21,7 +21,7 @@ This is my configuration for Wordpress development with Docker, using Redis as a
 
 ## Dockerfile
 
-The official docker compose from the official Wordpress Docker image would work, but in order to use the Redis extension for Wordpress, we need the PHP pecl redis extension to be installed. To do so, we build a new image from the official one.
+Le docker compose à partir de l’image officielle de Wordpress Docker fonctionnerait, mais afin d’utiliser l’extension Redis, nous avons besoin que l'extension PHP pecl redis soit installée. Pour ce faire, nous construisons une nouvelle image à partir de l’image officielle.
 
 ```yaml
 FROM wordpress
@@ -97,7 +97,7 @@ services:
 
 ## wp-config.php
 
-Add those constants in the `wp-config.php` file:
+Ajouter ces constantes au fichier `wp-config.php` :
 
 ```php
 define('FS_METHOD', 'direct');
@@ -105,4 +105,4 @@ define('WP_REDIS_HOST', 'redis');
 define('WP_REDIS_PORT', '6379');
 ```
 
-You can start up the app: `docker compose up`
+La stack peut être démarrée avec `docker compose up` 🚀

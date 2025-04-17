@@ -1,6 +1,6 @@
 ---
-slug: install-cursor-on-fedora
-title: Install Cursor IDE on Fedora
+slug: installer-cursor-ide-sur-fedora
+title: Installer Cursor sur Fedora
 authors: fabien
 tags: [fedora, linux, ide]
 ---

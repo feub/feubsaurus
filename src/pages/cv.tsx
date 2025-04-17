@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Layout from "@theme/Layout";
 import styles from "./cv.module.css";
 import Profile from "../components/cv/sidebar/profile";
 import Contact from "../components/cv/sidebar/contact";
@@ -23,64 +22,62 @@ export default function Cv() {
   };
 
   return (
-    <Layout>
-      <section className={styles.features}>
-        <div className="container">
-          <div className={styles.cvContainer}>
-            <div>
-              <div className={`${styles.roundedBox}`}>
-                <Profile />
-              </div>
-
-              <div className={`${styles.roundedBox}`}>
-                <Contact />
-              </div>
-
-              <div className={`${styles.roundedBox}`}>
-                <DownloadCv />
-              </div>
-
-              <div className={`${styles.roundedBox}`}>
-                <HardSkills />
-              </div>
-
-              <div className={`${styles.roundedBox}`}>
-                <Languages />
-              </div>
-
-              <div className={`${styles.roundedBox}`}>
-                <Extra />
-              </div>
+    <section className={styles.features}>
+      <div className="container">
+        <div className={styles.cvContainer}>
+          <div>
+            <div className={`${styles.roundedBox}`}>
+              <Profile />
             </div>
 
-            <main>
-              <div className={`${styles.roundedBox}`}>
-                <Intro />
-              </div>
+            <div className={`${styles.roundedBox}`}>
+              <Contact />
+            </div>
 
-              <div className={styles.roundedBox}>
-                <ExpEduSwitcher
-                  showExperience={showExperience}
-                  onSwitch={handleVisibilitySwitch}
-                />
-              </div>
-              {showExperience && (
-                <div className={styles.roundedBox}>
-                  <Experience />
-                </div>
-              )}
-              {showEduction && (
-                <div className={styles.roundedBox}>
-                  <Education />
-                </div>
-              )}
-              <div className={styles.roundedBox}>
-                <Projects />
-              </div>
-            </main>
+            <div className={`${styles.roundedBox}`}>
+              <DownloadCv />
+            </div>
+
+            <div className={`${styles.roundedBox}`}>
+              <HardSkills />
+            </div>
+
+            <div className={`${styles.roundedBox}`}>
+              <Languages />
+            </div>
+
+            <div className={`${styles.roundedBox}`}>
+              <Extra />
+            </div>
           </div>
+
+          <main>
+            <div className={`${styles.roundedBox}`}>
+              <Intro />
+            </div>
+
+            <div className={styles.roundedBox}>
+              <ExpEduSwitcher
+                showExperience={showExperience}
+                onSwitch={handleVisibilitySwitch}
+              />
+            </div>
+            {showExperience && (
+              <div className={styles.roundedBox}>
+                <Experience />
+              </div>
+            )}
+            {showEduction && (
+              <div className={styles.roundedBox}>
+                <Education />
+              </div>
+            )}
+            <div className={styles.roundedBox}>
+              <Projects />
+            </div>
+          </main>
         </div>
-      </section>
-    </Layout>
+      </div>
+    </section>
   );
 }

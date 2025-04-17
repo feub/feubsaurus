@@ -66,9 +66,9 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Feubsaurus",
+      title: "Fabien Amann",
       logo: {
-        alt: "My Site Logo",
+        alt: "Fabien Amann",
         src: "img/logo.svg",
       },
       items: [
@@ -89,15 +89,15 @@ const config: Config = {
     footer: {
       style: "dark",
       links: [
-        {
-          title: "Docs",
-          items: [
-            {
-              label: "Tutorial",
-              to: "/docs/intro",
-            },
-          ],
-        },
+        // {
+        //   title: "Docs",
+        //   items: [
+        //     {
+        //       label: "Tutorial",
+        //       to: "/docs/intro",
+        //     },
+        //   ],
+        // },
         {
           title: "Community",
           items: [
@@ -111,19 +111,19 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/feub",
-            },
-          ],
-        },
+        // {
+        //   title: "More",
+        //   items: [
+        //     {
+        //       label: "Blog",
+        //       to: "/blog",
+        //     },
+        //     {
+        //       label: "GitHub",
+        //       href: "https://github.com/feub",
+        //     },
+        //   ],
+        // },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Fabien Amann. Built with Docusaurus.`,
     },

@@ -4,28 +4,35 @@
  * work well for content-centric websites.
  */
 
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-font-family-base: "Varela Round", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --ifm-heading-font-family: "Varela Round", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --ifm-color-primary: #f5efe7;
+  --ifm-color-primary-dark: #e8dfd3;
+  --ifm-color-primary-darker: #dacfc0;
+  --ifm-color-primary-darkest: #ccbeac;
+  --ifm-color-primary-light: #f7f2eb;
+  --ifm-color-primary-lighter: #f9f5f0;
+  --ifm-color-primary-lightest: #fbf8f4;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #d8c4b6;
+  --ifm-color-primary-dark: #cab3a2;
+  --ifm-color-primary-darker: #bda28e;
+  --ifm-color-primary-darkest: #ad907a;
+  --ifm-color-primary-light: #e1d1c6;
+  --ifm-color-primary-lighter: #eadfd7;
+  --ifm-color-primary-lightest: #f3ece7;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -35,4 +42,34 @@ a {
 
 a:hover {
   color: #d8c4b6;
+}
+
+/* Footer customization */
+.footer {
+  /* Change background color */
+  --ifm-footer-background-color: #272e35;
+  /* Add padding */
+  padding: 2rem 0;
+}
+
+/* Footer title styling */
+.footer__title {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Footer link styling */
+.footer__link-item {
+  color: #b3b3b3;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+/* Footer copyright styling */
+.footer__copyright {
+  color: #999999;
+  font-size: 0.8rem;
 }

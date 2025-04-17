@@ -7,6 +7,10 @@
   color: #f5efe7;
 }
 
+.cvContainer p:last-child {
+  margin-bottom: 0;
+}
+
 .roundedBox {
   background-color: #272e35;
   border-radius: 0.7em;

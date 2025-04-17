@@ -173,7 +173,7 @@ export default function Projects(): ReactNode {
   return (
     <>
       <div>
-        <h2>Projets</h2>
+        <h2>Quelques projets</h2>
         <ul role="list">
           {projects_recent.map((project, idx) => (
             <ProjectItem key={idx} project={project} />

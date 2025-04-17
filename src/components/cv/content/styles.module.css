@@ -18,6 +18,7 @@ ul {
 .eduItemContainer:last-child,
 .projectItemContainer:last-child {
   border-bottom: none;
+  margin-bottom: 0;
 }
 
 .jobImg,

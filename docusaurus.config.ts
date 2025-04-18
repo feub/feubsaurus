@@ -77,12 +77,12 @@ const config: Config = {
         src: "img/feubsaurus.png",
       },
       items: [
-        // {
-        //   type: "docSidebar",
-        //   sidebarId: "tutorialSidebar",
-        //   position: "left",
-        //   label: "Tutorial",
-        // },
+        {
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "Docs",
+        },
         { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/feub",
@@ -98,7 +98,7 @@ const config: Config = {
         //   title: "Docs",
         //   items: [
         //     {
-        //       label: "Tutorial",
+        //       label: "Docs",
         //       to: "/docs/intro",
         //     },
         //   ],
@@ -138,7 +138,7 @@ const config: Config = {
     },
     colorMode: {
       defaultMode: "dark",
-      disableSwitch: false,
+      disableSwitch: true,
       respectPrefersColorScheme: false,
     },
   } satisfies Preset.ThemeConfig,

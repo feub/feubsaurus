@@ -32,3 +32,18 @@ ide:
   label: IDE
   permalink: /ide
   description: IDE tag description
+
+deploiement:
+  label: Déploiement
+  permalink: /deploiement
+  description: Déploiement tag description
+
+node:
+  label: Node
+  permalink: /node
+  description: Node tag description
+
+hosting:
+  label: Hosting
+  permalink: /hosting
+  description: Hosting tag description

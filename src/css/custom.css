@@ -36,14 +36,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-a {
-  color: #d8c4b6;
-}
-
-a:hover {
-  color: #d8c4b6;
-}
-
 /* Footer customization */
 .footer {
   /* Change background color */
@@ -72,4 +64,9 @@ a:hover {
 .footer__copyright {
   color: #999999;
   font-size: 0.8rem;
+}
+
+/* Target docs-specific elements */
+.docs-doc-page ul {
+  margin-left: 2em;
 }

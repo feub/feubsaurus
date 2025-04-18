@@ -1,49 +1,49 @@
 docker:
   label: Docker
   permalink: /docker
-  description: Docker tag description
+  description: Tous les articles sur Docker
 
 wordpress:
   label: Wordpress
   permalink: /wordpress
-  description: Wordpress tag description
+  description: Tous les articles sur Wordpress
 
 docusaurus:
   label: Docusaurus
   permalink: /docusaurus
-  description: Docusaurus tag description
+  description: Tous les articles sur Docusaurus
 
 redis:
   label: Redis
   permalink: /redis
-  description: Redis tag description
+  description: Tous les articles sur Redis
 
 fedora:
   label: Fedora
   permalink: /fedora
-  description: Fedora tag description
+  description: Tous les articles sur Fedora
 
 linux:
   label: Linux
   permalink: /linux
-  description: Linux tag description
+  description: Tous les articles sur Linux
 
 ide:
   label: IDE
   permalink: /ide
-  description: IDE tag description
+  description: Tous les articles sur les IDE
 
 deploiement:
   label: Déploiement
   permalink: /deploiement
-  description: Déploiement tag description
+  description: Tous les articles sur le Déploiement
 
 node:
   label: Node
   permalink: /node
-  description: Node tag description
+  description: Tous les articles sur NodeJS
 
 hosting:
   label: Hosting
   permalink: /hosting
-  description: Hosting tag description
+  description: Tous les articles sur l'hébergement

@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Pipeline CD avec GitHub Actions sur un VPS
 
-Voyons comment mettre en place un pipeline simple de **déploiement** pour un projet NodeJS (ce site [Docusaurus](https://https://docusaurus.io/) sur un VPS, ici chez [OVH](https://www.ovhcloud.com/fr/vps/).
+Voyons comment mettre en place un pipeline simple de **déploiement** pour un projet NodeJS (celui de ce site [**Docusaurus**](https://https://docusaurus.io/)) sur un VPS, ici chez [OVH](https://www.ovhcloud.com/fr/vps/).
 
 ## Pré-requis
 
@@ -13,7 +13,7 @@ Ce document explique la mise en place du déploiement uniquement, et non de l'in
 
 Voici donc ce qu'il faut pour mettre en place ce pipeline :
 
-- Un serveur avec un accès SSH (VPS, serveur dédié)
+- Un serveur avec un accès SSH (VPS, serveur dédié, etc)
 - Un site ou une application NodeJS
 - Un dépôt Git pour le site est question
 - Être à l'aise avec le Terminal, il faut juste quelques notions de Bash
@@ -35,7 +35,7 @@ Les clés sont générées et se trouvent dans le répertoire `~/.ssh/` :
 ~/.ssh/github_actions_key.pub
 ```
 
-Maintenant, il faut ajouter la clé publique au fichier `authorized_keys` :
+Ensuite, il faut ajouter la clé publique au fichier `authorized_keys` :
 
 ```sh
 # Copier le contenu de github_actions_key.pub dans authorized_keys
@@ -68,7 +68,7 @@ VPS_DIR     # Le répertoire vers où déployer le site
 
 ### Tester la connexion
 
-On peut maintenant tester la connexion au VPS :
+On peut maintenant tester la connexion au VPS avec la clé privée :
 
 ```sh
 ssh -i github_actions_key <utilisateur>@<ip-du-serveur>
@@ -76,7 +76,7 @@ ssh -i github_actions_key <utilisateur>@<ip-du-serveur>
 
 Remplacer `<utilisateur>` et `<ip-du-serveur>` par les bonnes valeurs.
 
-Si la connexion échoue, vérifier que les clés ont correctement été copiées, ainsi que les droits sur les fichiers (600).
+Si la connexion échoue, vérifier que les clés ont correctement été copiées et que les droits sur les fichiers sont les bons (600).
 
 Egalement, vérifier que la configuration du serveur SSH (`sshd_config`) autorise l'authentification par clé publique. Cette ligne doit exister (et n'être pas commentée) :
 
@@ -86,7 +86,7 @@ PubkeyAuthentication yes
 
 ## Configurer GitHub Actions
 
-Dernière étape, la configuration GitHub Actions pour le déploiement automatique.
+Dernière étape, la configuration **GitHub Actions** pour le **déploiement automatique**.
 
 ### Créer le fichier de workflow
 

@@ -31,7 +31,11 @@ const projects_recent: ProjectItem[] = [
       "Projet personnel d'une API (Symfony) de gestion de collection musicale sur supports physiques (CD, vinyles, etc.) avec un client React.",
     technos: "Symfony 7, MySQL, API, React, Shadcn",
     logoUrl: "libtrack-native-logo.png",
-    images: ["libtrack-react-login.png", "libtrack-sy.png"],
+    images: [
+      "libtrack-react-login.png",
+      "libtrack-releases.png",
+      "libtrack-add-release.png",
+    ],
     githubLink: "https://github.com/feub/libtrack-sy",
   },
   {

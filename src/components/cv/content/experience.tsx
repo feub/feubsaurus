@@ -104,9 +104,9 @@ export default function Experience(): ReactNode {
                 <div className={styles.jobItemHeader}>
                   <div>
                     <h4>{job.name}</h4>
-                    <p className={styles.jobItemHeaderLocation}>
+                    <div className={styles.jobItemHeaderLocation}>
                       {job.location}
-                    </p>
+                    </div>
                   </div>
                   <div className={styles.jobItemHeaderRight}>
                     <div className={styles.jobItemPeriod}>
@@ -116,7 +116,7 @@ export default function Experience(): ReactNode {
                     <h5>{job.role}</h5>
                   </div>
                 </div>
-                <p>{job.desc}</p>
+                <div>{job.desc}</div>
               </div>
             </li>
           ))}

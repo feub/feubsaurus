@@ -1,8 +1,7 @@
 import type { ReactNode } from "react";
-import { useState } from "react";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
 import { CodeBracketSquareIcon } from "@heroicons/react/24/outline";
-import ImageModal from "./ImageModal";
 
 type ProjectItem = {
   name: string;
@@ -63,7 +62,7 @@ const projects_recent: ProjectItem[] = [
   {
     name: "Feub CV",
     description:
-      "Il s'agit tout bonnement de ce site. Son code est disponible sur GitHub (lien ci-dessous). Il s'agit d'un site statique en Vue.js + Tailwind, facilement personnalisable, avec mode clair/sombre 🌞 🌚",
+      "Il s'agit d'un site statique type CV en Vue.js + Tailwind, facilement personnalisable, avec mode clair/sombre 🌞 🌚",
     technos: "Vue 3, Tailwind",
     logoUrl: "fabien_amann_li.jpg",
     images: "feub-cv.png",
@@ -98,26 +97,15 @@ const projects_recent: ProjectItem[] = [
 ];
 
 function ProjectItem({ project }: { project: ProjectItem }) {
-  const [modalOpen, setModalOpen] = useState<boolean>(false);
-  const [selectedImage, setSelectedImage] = useState<string>("");
-
-  const handleImageClick = (image: string) => {
-    setSelectedImage(require(`@site/static/img/${image}`).default);
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
   return (
     <>
       <li className={styles.projectItemContainer}>
         <img
-          src={require(`@site/static/img/${project.logoUrl}`).default}
+          src={useBaseUrl(`/img/${project.logoUrl}`)}
           alt={project.name}
           className={styles.projectLogo}
         />
+
         <div>
           <h4>{project.name}</h4>
           <p>
@@ -129,29 +117,50 @@ function ProjectItem({ project }: { project: ProjectItem }) {
           </p>
           <div>{project.description}</div>
           <div className={styles.projectItemImagesContainer}>
-            {Array.isArray(project.images) ? (
-              project.images.map((image, idx) => (
-                <img
-                  key={idx}
-                  src={require(`@site/static/img/${image}`).default}
-                  alt={project.name}
-                  className={styles.projectItemImage}
-                  onClick={() => handleImageClick(image)}
-                />
-              ))
-            ) : (
-              <img
-                src={require(`@site/static/img/${project.images}`).default}
-                alt={project.name}
-                className={styles.projectItemImage}
-                onClick={() =>
-                  typeof project.images === "string" &&
-                  handleImageClick(project.images)
-                }
-              />
-            )}
+            {Array.isArray(project.images)
+              ? project.images.map((image, idx) => (
+                  <a
+                    key={idx}
+                    href={useBaseUrl(`/img/${image}`)}
+                    data-lightbox={`project-${project.name.replace(
+                      /\s+/g,
+                      "-",
+                    )}`}
+                    data-title={`${project.name} screenshot ${idx + 1}`}
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent default browser navigation
+                      return false;
+                    }}
+                  >
+                    <img
+                      src={useBaseUrl(`/img/${image}`)}
+                      alt={`${project.name} screenshot ${idx + 1}`}
+                      className={styles.projectItemImage}
+                    />
+                  </a>
+                ))
+              : project.images && (
+                  <a
+                    href={useBaseUrl(`/img/${project.images}`)}
+                    data-lightbox={`project-${project.name.replace(
+                      /\s+/g,
+                      "-",
+                    )}`}
+                    data-title={`${project.name} screenshot`}
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent default browser navigation
+                      return false;
+                    }}
+                  >
+                    <img
+                      src={useBaseUrl(`/img/${project.images}`)}
+                      alt={`${project.name} screenshot`}
+                      className={styles.projectItemImage}
+                    />
+                  </a>
+                )}
           </div>
-          <p>
+          <div>
             <a
               href={`${project.githubLink}`}
               target="_blank"
@@ -160,15 +169,9 @@ function ProjectItem({ project }: { project: ProjectItem }) {
               <CodeBracketSquareIcon className={styles.projectLinkIcon} />
               <div>Lien GitHub du projet</div>
             </a>
-          </p>
+          </div>
         </div>
       </li>
-      <ImageModal
-        isOpen={modalOpen}
-        imageUrl={selectedImage}
-        alt={project.name}
-        onClose={closeModal}
-      />
     </>
   );
 }

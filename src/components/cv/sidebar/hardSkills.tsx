@@ -13,6 +13,7 @@ const skills: Array<string> = [
   "Apollo Server",
   "GIT",
   "Docker",
+  "microservices",
   "VS Code",
   "SQL",
   "NoSQL",

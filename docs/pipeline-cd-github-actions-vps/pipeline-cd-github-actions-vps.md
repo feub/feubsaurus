@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Pipeline CD GitHub Actions VPS"
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Pipeline CD avec GitHub Actions sur un VPS

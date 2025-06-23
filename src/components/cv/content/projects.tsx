@@ -20,6 +20,39 @@ type ProjectItem = {
 const projects_recent: ProjectItem[] = [
   {
     id: 1,
+    name: "LibTrack (API + client)",
+    description:
+      "Projet personnel d'une API (Symfony) de gestion de collection musicale sur supports physiques (CD, vinyles, etc.) avec un client React.",
+    technos: "Symfony 7, MySQL, API, React, Shadcn, Discogs API",
+    logoUrl: "libtrack-native-logo.png",
+    images: [
+      "libtrack-login-page.png",
+      "libtrack-releases.png",
+      "libtrack-releases-light-theme.png",
+      "libtrack-service-search.png",
+      "libtrack-stats.png",
+      "libtrack-artist-edit.png",
+    ],
+    githubLink: "https://github.com/feub/libtrack-sy",
+  },
+  {
+    id: 2,
+    name: "LibTrack Scanner (application Android)",
+    description:
+      "Client mobile pour l'API LibTrack (ci-dessus) qui permet de scanner les codes barre des supports physiques pour une recherche (API Discogs) et un ajout rapides.",
+    technos: "React Native",
+    logoUrl: "libtrack-scanner-logo.png",
+    images: [
+      "libtrack-scanner-releases.jpg",
+      "libtrack-scanner-scan.jpg",
+      "libtrack-scanner-scan-results.jpg",
+      "libtrack-scanner-search.jpg",
+      "libtrack-scanner-shelves-filter.jpg",
+    ],
+    githubLink: "https://github.com/feub/libtrack-react-native",
+  },
+  {
+    id: 3,
     name: "ClubCompta - Application de Gestion de Budget Associatif",
     description:
       "Ce projet, sur lequel j'ai eu le plaisir de collaborer avec une équipe talentueuse, a été réalisé dans le cadre de ma formation en Conception et Développement d’Applications à la Wild Code School. Il s'agit d'une architecture en microservices majoritairement en TypeScript (avec un service en PHP). Notre objectif était de créer une interface intuitive répondant aux besoins spécifiques des associations, afin de faciliter leur gestion financière.",
@@ -28,35 +61,6 @@ const projects_recent: ProjectItem[] = [
     logoUrl: "logo-clubcompta.svg",
     images: ["clubcompta-charts.png", "clubcompta.jpg", "clubcompta-users.png"],
     githubLink: "https://github.com/feub/ClubCompta",
-  },
-  {
-    id: 2,
-    name: "LibTrack (API + client)",
-    description:
-      "Projet personnel d'une API (Symfony) de gestion de collection musicale sur supports physiques (CD, vinyles, etc.) avec un client React.",
-    technos: "Symfony 7, MySQL, API, React, Shadcn, Discogs API",
-    logoUrl: "libtrack-native-logo.png",
-    images: [
-      "libtrack-react-login.png",
-      "libtrack-releases.png",
-      "libtrack-add-release.png",
-    ],
-    githubLink: "https://github.com/feub/libtrack-sy",
-  },
-  {
-    id: 3,
-    name: "LibTrack Scanner (client mobile)",
-    description:
-      "Client mobile pour l'API LibTrack (ci-dessus) qui permet notamment de scanner les codes barre des supports physiques pour une recherche (API Discogs) et un ajout rapide.",
-    technos: "React Native",
-    logoUrl: "libtrack-native-logo.png",
-    images: [
-      "libtrack-native-releases.jpg",
-      "libtrack-native-scan.jpg",
-      "libtrack-native-scanning.jpg",
-      "libtrack-native-scan-results.jpg",
-    ],
-    githubLink: "https://github.com/feub/libtrack-react-native",
   },
   // {
   //     name: 'In My Pantry',

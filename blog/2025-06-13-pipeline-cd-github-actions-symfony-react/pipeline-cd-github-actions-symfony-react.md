@@ -7,6 +7,8 @@ tags: [deploiement, react, symfony, hosting, github, linux]
 
 Ce document explique de façon concise comment mettre en place un pipeline de **déploiement continu** (CD) pour un projet avec un **backend Symfony**, un **frontend React** avec une **base de données MySQL** sur un VPS OVH sous [Rocky Linux](https://rockylinux.org/).
 
+<!-- truncate -->
+
 ## Pré-requis
 
 On estime qu'il y a déjà un serveur web fonctionnel, dans mon cas, il s'agit de [Caddy](https://caddyserver.com/) faisant office de reverse proxy. Ce document ne parle pas non plus de la construction des fichiers dockerfile, on suppose qu'ils sont fonctionnels.

@@ -7,6 +7,8 @@ tags: [deploiement, node, hosting, docusaurus, linux]
 
 Voyons comment mettre en place un pipeline simple de **déploiement** pour un projet NodeJS (celui de ce site [**Docusaurus**](https://https://docusaurus.io/)) sur un VPS, ici chez [OVH](https://www.ovhcloud.com/fr/vps/).
 
+<!-- truncate -->
+
 ## Pré-requis
 
 Ce document explique la mise en place du déploiement uniquement, et non de l'installation du serveur. On estime qu'il y a déjà un serveur web (Nginx, Apache, Caddy, etc) fonctionnel, qui sert déjà le site en question. On va juste ajouter le déploiement automatique.

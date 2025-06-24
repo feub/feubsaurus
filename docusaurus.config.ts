@@ -40,7 +40,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/feub",
+          // editUrl: "https://github.com/feub",
         },
         blog: {
           showReadingTime: true,
@@ -54,7 +54,7 @@ const config: Config = {
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "ignore",
+          onUntruncatedBlogPosts: "warn", // "ignore"
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -77,12 +77,12 @@ const config: Config = {
         src: "img/feubsaurus.png",
       },
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Docs",
-        },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "tutorialSidebar",
+        //   position: "left",
+        //   label: "Docs",
+        // },
         { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/feub",

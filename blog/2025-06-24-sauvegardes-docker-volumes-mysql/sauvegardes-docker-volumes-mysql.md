@@ -203,6 +203,8 @@ else
 fi
 ```
 
+Ne pas oublier de donner les droits d'exécution au fichier : `chmod +x backup-docker.sh`.
+
 Exemple d'exécution du script :
 
 ```sh
@@ -216,6 +218,38 @@ BACKUP STARTING - 24-06-2025 14:48:06
 - Cleanup (keeping only files older than 7 days)
 - Email notification sent successfully
 BACKUP FINISHED - 24-06-2025 14:48:11
+```
+
+L'email reçu ressemble à ça :
+
+```
+Backup Report for vps-xxxxxx.hvo.net
+========================================
+
+Backup Date: 24-06-2025 14:48:11
+Backup Directory: /home/utilisateur/backups
+
+Volume Backup:
+- Volume Name: images_data
+- Status: SUCCESS
+- File: /home/utilisateur/backups/images_data-20250624-144806.tar.gz
+- Size: 77M
+
+MySQL Database Backup:
+- Database: superdb
+- Status: SUCCESS
+- File: /home/utilisateur/backups/superdb-20250624-144806.sql
+- Size: 88K
+
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda4        39G   14G   26G  35% /
+
+Recent Backup Files:
+-rw-r--r--. 1 utilisateur utilisateur 87K Jun 24 14:48 /home/utilisateur/backups/superdb-20250624-144806.sql
+-rw-r--r--. 1 utilisateur utilisateur 77M Jun 24 14:48 /home/utilisateur/backups/images_data-20250624-144806.tar.gz
+
+Overall Status: SUCCESS
 ```
 
 ### Cron

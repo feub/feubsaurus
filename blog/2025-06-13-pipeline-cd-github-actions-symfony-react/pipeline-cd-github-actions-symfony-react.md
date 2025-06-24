@@ -34,7 +34,7 @@ php/
     Dockerfile
 ```
 
-Pour la partie création d'une paire de clés SSH pour GitHub Actions, se reporter au tutoriel [Pipeline CD avec GitHub Actions sur un VPS](/docs/pipeline-cd-github-actions-vps/).
+Pour la partie création d'une paire de clés SSH pour GitHub Actions, se reporter au tutoriel [Pipeline CD avec GitHub Actions sur un VPS](/blog/pipeline-cd-github-actions-vps).
 
 Note : je suis utilisateur de machines Linux _RMP-based_, ici Rocky Linux, ça n'a pas grande importance ici sauf pour la partie webhook plus bas.
 

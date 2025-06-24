@@ -1,9 +1,9 @@
 ---
-sidebar_label: "Pipeline CD GitHub Actions Symfony/React"
-sidebar_position: 1
+slug: pipeline-cd-github-actions-symfony-react
+title: "Pipeline CD GitHub Actions Symfony/React"
+authors: fabien
+tags: [deploiement, react, symfony, hosting, github, linux]
 ---
-
-# Pipeline CD avec GitHub Actions Symfony/React
 
 Ce document explique de façon concise comment mettre en place un pipeline de **déploiement continu** (CD) pour un projet avec un **backend Symfony**, un **frontend React** avec une **base de données MySQL** sur un VPS OVH sous [Rocky Linux](https://rockylinux.org/).
 

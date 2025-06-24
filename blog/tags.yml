@@ -57,3 +57,13 @@ github:
   label: GitHub
   permalink: /github
   description: Tous les articles sur GitHub
+
+database:
+  label: Database
+  permalink: /database
+  description: Tous les articles sur les bases de données
+
+bash:
+  label: Bash
+  permalink: /bash
+  description: Tous les articles sur Bash

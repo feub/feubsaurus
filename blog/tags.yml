@@ -47,3 +47,13 @@ hosting:
   label: Hosting
   permalink: /hosting
   description: Tous les articles sur l'hébergement
+
+react:
+  label: React
+  permalink: /react
+  description: Tous les articles sur React
+
+github:
+  label: GitHub
+  permalink: /github
+  description: Tous les articles sur GitHub

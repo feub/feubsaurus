@@ -1,9 +1,9 @@
 ---
-sidebar_label: "Pipeline CD GitHub Actions VPS"
-sidebar_position: 2
+slug: pipeline-cd-github-actions-vps
+title: "Pipeline CD GitHub Actions vers VPS"
+authors: fabien
+tags: [deploiement, node, hosting, docusaurus, linux]
 ---
-
-# Pipeline CD avec GitHub Actions sur un VPS
 
 Voyons comment mettre en place un pipeline simple de **déploiement** pour un projet NodeJS (celui de ce site [**Docusaurus**](https://https://docusaurus.io/)) sur un VPS, ici chez [OVH](https://www.ovhcloud.com/fr/vps/).
 

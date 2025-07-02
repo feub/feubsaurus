@@ -31,6 +31,7 @@ const projects_recent: ProjectItem[] = [
       "libtrack-releases-light-theme.png",
       "libtrack-service-search.png",
       "libtrack-stats.png",
+      "libtrack-add-release.png",
       "libtrack-artist-edit.png",
     ],
     githubLink: "https://github.com/feub/libtrack-sy",

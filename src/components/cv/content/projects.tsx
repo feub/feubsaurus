@@ -22,17 +22,18 @@ const projects_recent: ProjectItem[] = [
     id: 1,
     name: "LibTrack (API + client)",
     description:
-      "Projet personnel d'une API (Symfony) de gestion de collection musicale sur supports physiques (CD, vinyles, etc.) avec un client React.",
-    technos: "Symfony 7, MySQL, API, React, Shadcn, Discogs API",
-    logoUrl: "libtrack-native-logo.png",
+      "Projet personnel d'une API (Symfony) de gestion de collection musicale sur supports physiques (CD, vinyles, etc.) avec un client React. Utilisation de l'IA (Mistral) pour l'aide à la complétion des informations sur les albums.",
+    technos: "Symfony 7, React, MySQL, Shadcn, Discogs API, Mistral AI",
+    logoUrl: "libtrack-scanner-logo.png",
     images: [
-      "libtrack-login-page.png",
       "libtrack-releases.png",
+      "libtrack-powered-by-ai.mp4",
       "libtrack-releases-light-theme.png",
       "libtrack-service-search.png",
       "libtrack-stats.png",
       "libtrack-add-release.png",
       "libtrack-artist-edit.png",
+      "libtrack-login-page.png",
     ],
     githubLink: "https://github.com/feub/libtrack-sy",
   },
@@ -115,10 +116,19 @@ const projects_recent: ProjectItem[] = [
 
 function ProjectItem({ project }: { project: ProjectItem }) {
   useEffect(() => {
-    Fancybox.bind("[data-fancybox]", {
-      // Options de configuration ici
-    });
+    Fancybox.bind("[data-fancybox]", {});
   }, []);
+
+  // Helper function to check if file is video
+  const isVideo = (filename: string) => {
+    return /\.(mp4|webm|ogg|mov|avi)$/i.test(filename);
+  };
+
+  // Helper function to get video thumbnail
+  const getVideoThumbnail = (videoFilename: string) => {
+    // Replace the video extension with .jpg for the thumbnail
+    return videoFilename.replace(/\.(mp4|webm|ogg|mov|avi)$/i, "-thumb.png");
+  };
 
   return (
     <BrowserOnly fallback={<div>Loading...</div>}>
@@ -149,7 +159,11 @@ function ProjectItem({ project }: { project: ProjectItem }) {
                       data-fancybox={`gallery-${project.id}`}
                     >
                       <img
-                        src={useBaseUrl(`/img/${image}`)}
+                        src={useBaseUrl(
+                          `/img/${
+                            isVideo(image) ? getVideoThumbnail(image) : image
+                          }`,
+                        )}
                         alt={`${project.name} screenshot ${idx + 1}`}
                         className={styles.projectItemImage}
                       />
@@ -161,7 +175,13 @@ function ProjectItem({ project }: { project: ProjectItem }) {
                       data-fancybox={`gallery-${project.id}`}
                     >
                       <img
-                        src={useBaseUrl(`/img/${project.images}`)}
+                        src={useBaseUrl(
+                          `/img/${
+                            isVideo(project.images)
+                              ? getVideoThumbnail(project.images)
+                              : project.images
+                          }`,
+                        )}
                         alt={`${project.name} screenshot`}
                         className={styles.projectItemImage}
                       />

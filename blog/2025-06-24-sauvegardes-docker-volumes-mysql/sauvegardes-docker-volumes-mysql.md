@@ -103,12 +103,11 @@ MYSQL_CONTAINER="conteneur-mysql"
 MYSQL_DUMP_FILE="${BACKUP_DIR}/${MYSQL_DB}-${TIMESTAMP}.sql"
 EMAIL_TO="usr@email.net"
 EMAIL_FROM="usr@email.net"
-EMAIL_SUBJECT="Backup of ${VOLUME_NAME} and ${MYSQL_DB} on $(hostname) - $(date +%d-%m-%Y\ %H:%M:%S)"
-# /Variables
 
 # Initialize status tracking
 VOLUME_BACKUP_STATUS="FAILED"
 MYSQL_BACKUP_STATUS="FAILED"
+OVERALL_BACKUP_STATUS="FAILED"
 VOLUME_SIZE=""
 MYSQL_SIZE=""
 
@@ -151,6 +150,16 @@ echo "- Cleanup (keeping only files older than 7 days)"
 # Keep only files older than 7 days
 find "$BACKUP_DIR" -name "${VOLUME_NAME}-*.tar.gz" -type f -mtime +7 -delete
 find "$BACKUP_DIR" -name "${MYSQL_DB}-*.sql" -type f -mtime +7 -delete
+
+# Set overall backup status
+if [[ "$VOLUME_BACKUP_STATUS" == "SUCCESS" && "$MYSQL_BACKUP_STATUS" == "SUCCESS" ]]; then
+    OVERALL_BACKUP_STATUS="SUCCESS"
+else
+    OVERALL_BACKUP_STATUS="FAILED"
+fi
+
+# Email subject
+EMAIL_SUBJECT="[${OVERALL_BACKUP_STATUS}] Backup of ${VOLUME_NAME} and ${MYSQL_DB} on $(hostname) - $(date +%d-%m-%Y\ %H:%M:%S)"
 
 # Create detailed email body
 EMAIL_BODY=$(

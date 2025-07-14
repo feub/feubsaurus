@@ -6,6 +6,8 @@ import Layout from "@theme/Layout";
 import styles from "./index.module.css";
 import Cv from "./cv";
 
+const openToWork = false;
+
 function HomepageHeader() {
   return (
     <header
@@ -31,7 +33,7 @@ export default function Home(): ReactNode {
       title={`Hello from ${siteConfig.title}`}
       description={`Hello from ${siteConfig.tagline}`}
     >
-      <HomepageHeader />
+      {openToWork && <HomepageHeader />}
       <main>
         <Cv />
       </main>

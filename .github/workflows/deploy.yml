@@ -30,7 +30,7 @@ jobs:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22270
+          port: 27270
           source: "./build/"
           target: "${{ secrets.VPS_DIR }}"
           strip_components: 1
